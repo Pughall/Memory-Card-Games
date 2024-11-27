@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>Memory Card Game</h1>
+    </header>
+
+    <div id="login-page">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="text" id="employee-id" placeholder="Employee ID" required>
+            <button type="submit">Start Game</button>
+        </form>
+        <div id="login-leaderboard-container">
+            <h2>Top 5 Players</h2>
+            <ol id="login-leaderboard"></ol>
+        </div>
+    </div>
+
+    <div id="game-page" style="display: none;">
+        <div id="user-info"></div>
+        <div id="timer">0</div>
+        <div id="score">0</div>
+        <div id="game-board" class="grid"></div>
+        <button id="restart-button">Restart Game</button>
+        <button id="show-all-records-button">Show All Records</button>
+        <ul id="all-records" style="display: none;"></ul>
+        <button id="generate-excel-button">Generate Excel File</button>
+        <button id="navigate-button">Home</button>
+    </div>
+
+    <div id="leaderboard-container">
+        <h2>Leaderboard</h2>
+        <ol id="leaderboard"></ol>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

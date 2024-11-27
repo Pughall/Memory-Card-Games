@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #004b87;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+#login-page, #game-page {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 90%;
+    max-width: 800px;
+}
+
+input, button {
+    font-size: 1.5em;
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #004b87;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.card .front, .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+
+.card .front {
+    background-color: #ccc;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+    background-size: cover;
+    background-position: center;
+}
+
+#leaderboard-container, #login-leaderboard-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+
+#leaderboard-container h2, #login-leaderboard-container h2 {
+    color: #004b87;
+}
+
+#leaderboard, #login-leaderboard {
+    list-style: none;
+    padding: 0;
+}
+
+#leaderboard li, #login-leaderboard li {
+    font-size: 1.2em;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#leaderboard li:first-child, #login-leaderboard li:first-child {
+    font-weight: bold;
+    color: gold;
+}
+
+#leaderboard li:nth-child(2), #login-leaderboard li:nth-child(2) {
+    font-weight: bold;
+    color: silver;
+}
+
+#leaderboard li:nth-child(3), #login-leaderboard li:nth-child(3) {
+    font-weight: bold;
+    color: #cd7f32; /* Bronze color */
+}

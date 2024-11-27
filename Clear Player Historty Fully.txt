@@ -1,0 +1,13 @@
+
+Right-click on your webpage and select Inspect.
+Alternatively, you can press F12 or Ctrl+Shift+I (Windows/Linux) or Cmd+Option+I (Mac).
+Go to the Console Tab:
+
+In the Developer Tools, navigate to the Console tab.
+Clear Local Storage:
+
+Type the following command and press Enter:
+localStorage.removeItem('leaderboard');
+This will clear the leaderboard data stored in the local storage. Refresh the page to see the changes.
+
+If you need any further assistance, feel free to ask!
